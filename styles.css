@@ -49,6 +49,8 @@ main{
     grid-area: contenido;
     display: grid;
     grid-template-areas: "secc1 secc1 secc2";
+    margin: 0 50px;
+    gap: 40px;
 }
 
 .sec1{
@@ -56,9 +58,8 @@ main{
 }
 
 .text-area{
-    width: 90%;
+    width: 100%;
     height: 80%;
-    margin-left: 50px;
     padding: 20px;
     border-radius: 15px;
     font-size: 20px;
@@ -66,15 +67,31 @@ main{
     color: var(--cazul);
     text-transform: lowercase;
     box-sizing: border-box;
+    box-shadow: 5px 5px 10px 0px #A3A4AF;
 }
 
 .informacion{
-    margin: 10px 50px;
+    margin: 10px 0px;
     font-size: 13px;
 }
 
+.ico{
+    width: 13px;
+}
+
+button{
+cursor: pointer;
+}
+
+button:hover{
+    background: #000000;
+    color: var(--cblanco);
+    border: none;
+    transition: all 1s ease;
+}
+
 .botones{
-    margin: 10px 50px;
+    margin: 10px 0px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -88,13 +105,13 @@ main{
     
 }
 
-.btn-encriptar, .btn-limpiar{
+.btn-encriptar, .btn_limpiar{
     background: var(--cazul);
     color: var(--cblanco);
     border: none;
 }
 
-.btn-desencriptar{
+.btn_desencriptar{
     background: var(--cazulligero);
     border: 1px solid var(--cazul);
 }
@@ -107,15 +124,20 @@ main{
     background: var(--cblanco);
     width: 90%;
     height: 100%;
-    margin: 0px 0px 0 50px;
     padding: 20px;
     border-radius: 15px;
-    
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 10px 0px #A3A4AF;
+    text-align: center;
 }
 
+.muneco{
+    position: fixed;
+    margin: 50px;
+}
 .mensaje{
     height: 80%;
     border: none;
@@ -137,4 +159,62 @@ main{
 
 footer{
     grid-area: pie;
+    background: var(--cazul);
+    color: var(--cblanco);
+    text-align: center;
+    font-size: 10px;
+    margin-top: auto;
+}
+
+
+
+
+
+.ocultar{
+    display: none;
+}
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    body{
+        grid-template-areas:
+        "encabezado"
+        "contenido"
+        "pie";
+
+    gap: 20px;
+    }
+
+    main{
+        grid-template-areas:
+        "secc1"
+        "secc2";
+    }
+
+    aside p{
+        font-size: 25px;
+    }
+
+    .text-area{
+        font-size: 25px;
+    }
+
+    .recuadro{
+        width: 100%;
+        height: 90%;
+    }
+
+    .muneco{
+        position: static;
+        margin: auto;
+    }
+
+    footer{
+        font-size: 15px;
+    }
+
 }
