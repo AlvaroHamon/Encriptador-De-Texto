@@ -143,6 +143,7 @@ button:hover{
     border: none;
     color: var(--cazul);
     font-size: 20px;
+    outline: none;
 }
 
 .copiar{
