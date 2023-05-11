@@ -57,7 +57,7 @@ main{
     grid-area: secc1;
 }
 
-.text-area{
+.text_area{
     width: 100%;
     height: 80%;
     padding: 20px;
@@ -142,6 +142,7 @@ button:hover{
     height: 80%;
     border: none;
     color: var(--cazul);
+    font-size: 20px;
 }
 
 .copiar{
@@ -199,7 +200,7 @@ footer{
         font-size: 25px;
     }
 
-    .text-area{
+    .text_area{
         font-size: 25px;
     }
 
