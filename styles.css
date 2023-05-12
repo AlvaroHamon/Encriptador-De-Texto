@@ -86,7 +86,6 @@ cursor: pointer;
 button:hover{
     background: #000000;
     color: var(--cblanco);
-    border: none;
     transition: all 1s ease;
 }
 
@@ -99,13 +98,14 @@ button:hover{
 .botones button{
     padding: 10px;
     border-radius: 10px;
+    border: 1px solid #000000;
     width: 100%;
     font-weight: bold;
     margin: 0 5px;
     
 }
 
-.btn-encriptar, .btn_limpiar{
+.btn_encriptar, .btn_limpiar{
     background: var(--cazul);
     color: var(--cblanco);
     border: none;
