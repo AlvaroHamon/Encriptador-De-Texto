@@ -14,11 +14,13 @@ const mensaje = document.querySelector(".mensaje");
 
 function encriptar(strEncrip) {
 
-    if (strEncrip.trim() === "") {
+    let check = /[^a-z 0-9]/.test(strEncrip);
+    if (check) {
+        alert("El texto no debe contener mayusculas o simbolos especiales");
+    } else if (strEncrip.trim() === "") {
         alert("Debe agregar el texto a Encriptar");
-    } else {
+    } else{
         let matriz = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-        strEncrip = strEncrip.toLowerCase();
         for (let i = 0; i < matriz.length; i++) {
             if (strEncrip.includes(matriz[i][0])) {
                 strEncrip = strEncrip.replaceAll(matriz[i][0], matriz[i][1]);
@@ -30,12 +32,15 @@ function encriptar(strEncrip) {
         console.log(strEncrip);
         mensaje.value = strEncrip;
         return strEncrip;
+
     }
 }
 
 function desencriptar(strDesencrip) {
-
-    if (strDesencrip.trim() === "") {
+    let check = /[^a-z 0-9]/.test(strDesencrip);
+    if (check) {
+        alert("El texto no debe contener mayusculas o simbolos especiales");
+    } else if (strDesencrip.trim() === "") {
         alert("Debe agregar el texto a Desecriptar");
     } else {
         let matriz = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
@@ -48,7 +53,7 @@ function desencriptar(strDesencrip) {
         document.getElementById("muneco").style.display = "none";
         document.getElementById("ningun_msn").style.display = "none";
         document.getElementById("btn_copiar").style.display = "initial";
-        mensaje.value=strDesencrip;
+        mensaje.value = strDesencrip;
         return strDesencrip;
     }
 

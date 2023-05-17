@@ -65,7 +65,6 @@ main{
     font-size: 20px;
     border: none;
     color: var(--cazul);
-    text-transform: lowercase;
     box-sizing: border-box;
     box-shadow: 5px 5px 10px 0px #A3A4AF;
 }
