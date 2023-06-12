@@ -6,7 +6,7 @@
 }
 
 html{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     font-family: "inter";
     background: #f4f4fc;
@@ -67,6 +67,7 @@ main{
     color: var(--cazul);
     box-sizing: border-box;
     box-shadow: 5px 5px 10px 0px #A3A4AF;
+    resize: none;
 }
 
 .informacion{
@@ -137,12 +138,14 @@ button:hover{
     position: fixed;
     margin: 50px;
 }
+
 .mensaje{
     height: 80%;
     border: none;
     color: var(--cazul);
     font-size: 20px;
     outline: none;
+    resize: none;
 }
 
 .copiar{
@@ -190,10 +193,25 @@ footer{
     gap: 20px;
     }
 
+    header{
+        grid-template-areas: "logo titulo";
+        width: 100vw;
+    }
+
     main{
         grid-template-areas:
         "secc1"
         "secc2";
+        width: 80vw;
+        margin: 0 10vw;
+    }
+
+    main, .sec1, .sec2{
+        width: 80vw;
+    }
+
+    .muneco, .mensaje{
+        width: 70vw;
     }
 
     aside p{
